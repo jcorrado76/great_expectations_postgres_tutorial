@@ -1,0 +1,17 @@
+DOCKER_CONTAINER_NAME = ge_tutorial_pg
+POSTGRES_USER = sde
+POSTGRES_PASSWORD = password
+POSTGRES_DB = data_quality
+POSTGRES_IMAGE = postgres:12.2
+POSTGRES_PORT = 5432
+
+
+postgres_docker:
+	docker run --name $(DOCKER_CONTAINER_NAME) \
+		-p $(POSTGRES_PORT):$(POSTGRES_PORT) \
+		-e POSTGRES_USER=$(POSTGRES_USER) \
+		-e POSTGRES_PASSWORD=$(POSTGRES_PASSWORD) \
+		-e POSTGRES_DB=$(POSTGRES_DB) \
+		-d $(POSTGRES_IMAGE)
+
+all: postgres_docker
