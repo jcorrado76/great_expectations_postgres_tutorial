@@ -1,0 +1,68 @@
+{
+  "data_asset_type": "Dataset",
+  "expectation_suite_name": "app.order.error",
+  "expectations": [
+    {
+      "expectation_type": "expect_column_distinct_values_to_be_in_set",
+      "kwargs": {
+        "column": "customer_id",
+        "value_set": [
+          "customer_2",
+          "customer_1"
+        ]
+      },
+      "meta": {}
+    }
+  ],
+  "meta": {
+    "BasicSuiteBuilderProfiler": {
+      "batch_kwargs": {
+        "data_asset_name": "app.order",
+        "datasource": "data_quality",
+        "limit": 1000,
+        "schema": "app",
+        "table": "order"
+      },
+      "created_at": 1625341691.194398,
+      "created_by": "BasicSuiteBuilderProfiler"
+    },
+    "citations": [
+      {
+        "batch_definition": null,
+        "batch_kwargs": {
+          "data_asset_name": "app.order",
+          "datasource": "data_quality",
+          "limit": 1000,
+          "schema": "app",
+          "table": "order"
+        },
+        "batch_markers": {
+          "ge_load_time": "20210703T194811.132003Z"
+        },
+        "batch_parameters": null,
+        "batch_request": null,
+        "batch_spec": null,
+        "citation_date": "2021-07-03T19:48:11.222072Z",
+        "comment": "BasicSuiteBuilderProfiler added a citation based on the current batch."
+      }
+    ],
+    "columns": {
+      "customer_id": {
+        "description": ""
+      },
+      "order_id": {
+        "description": ""
+      },
+      "status": {
+        "description": ""
+      }
+    },
+    "great_expectations_version": "0.13.20",
+    "notes": {
+      "content": [
+        "#### This is an _example_ suite\n\n- This suite was made by quickly glancing at 1000 rows of your data.\n- This is **not a production suite**. It is meant to show examples of expectations.\n- Because this suite was auto-generated using a very basic profiler that does not know your data like you do, many of the expectations may not be meaningful.\n"
+      ],
+      "format": "markdown"
+    }
+  }
+}

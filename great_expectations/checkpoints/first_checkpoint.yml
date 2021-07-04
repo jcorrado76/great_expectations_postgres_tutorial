@@ -1,0 +1,13 @@
+name: first_checkpoint
+config_version:
+module_name: great_expectations.checkpoint
+class_name: LegacyCheckpoint
+validation_operator_name:
+batches:
+  - batch_kwargs:
+      table: order
+      schema: app
+      data_asset_name: app.order
+      datasource: data_quality
+    expectation_suite_names:
+      - app.order.error
